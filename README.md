@@ -10,4 +10,6 @@ This tiny WPF_NarratorAnnouncements app came about following a request for a sam
 
 And like the code says, do consider whether it's ok for the text announced to be reached by the customer later when navigating around the UI. If the text could become stale and misleading, make sure to clear it after it's been announced.
 
+The image below show the Accessibility Insights for Windows tool reporting that a UIA LiveRegionChanged event is raised from a WPF TextBlock, and that the UIA LiveSetting property of Assertive, (a value of 2).
 
+![AIWin reporting a LiveRegionChaged event](.\AIWinEvent.png)
