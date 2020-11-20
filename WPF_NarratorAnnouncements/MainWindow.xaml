@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPF_NarratorAnnouncements.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_NarratorAnnouncements"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="20">
+        <StackPanel>
+            <CheckBox Content="Make an announcement with a LiveRegion" 
+                Click="LiveRegionCB_Click" Margin="0 0 0 10" />
+            
+            <!-- The text on this TextBlock is the source of the Narrator announcement.
+                 If the TextBlock is not Visible, then Narrator will not make the 
+                 expected announcent. Given that in this sample app it is desired 
+                 that the TextBlock should have no visual representation, give it 
+                 zero dimensions. (Alternatively position it out of the window.) -->
+            <TextBlock x:Name="LiveRegionTB" 
+                AutomationProperties.LiveSetting="Assertive"
+                Width="0" Height="0" />
+        </StackPanel>
+    </Grid>
+</Window>
