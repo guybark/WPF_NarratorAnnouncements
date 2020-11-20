@@ -16,9 +16,12 @@
                  expected announcent. Given that in this sample app it is desired 
                  that the TextBlock should have no visual representation, give it 
                  zero dimensions. (Alternatively position it out of the window.) -->
+            
+            <!-- A more considered sample might take action to make sure this TextBlock
+                 gets positioned over the UI that it relates to. -->
             <TextBlock x:Name="LiveRegionTB" 
                 AutomationProperties.LiveSetting="Assertive"
-                Width="0" Height="0" />
+                Width="0" Height="0" Visibility="Collapsed" />
         </StackPanel>
     </Grid>
 </Window>
